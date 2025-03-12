@@ -1,4 +1,4 @@
-import en from './en.js'
+const en = require('./en.js')
 
 const unit = Object.create(en)
 
@@ -13,7 +13,7 @@ unit.milliseconde = en.ms
 unit.microseconde = en.us
 unit.nanoseconde = en.ns
 
-unit.group = ' '
+unit.group = ' '
 unit.decimal = ','
 
-export default unit
+module.exports = unit

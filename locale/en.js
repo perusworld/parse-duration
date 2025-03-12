@@ -16,4 +16,4 @@ unit.group = ','
 unit.decimal = '.'
 unit.placeholder = ' _'
 
-export default unit
+module.exports = unit

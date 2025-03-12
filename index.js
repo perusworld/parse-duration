@@ -1,8 +1,6 @@
-import en from './locale/en.js'
+const en = require('./locale/en.js')
 
 const durationRE = /((?:\d{1,16}(?:\.\d{1,16})?|\.\d{1,16})(?:[eE][-+]?\d{1,4})?)\s?([\p{L}]{0,14})/gu
-
-parse.unit = en
 
 /**
  * convert `str` to ms
@@ -11,7 +9,7 @@ parse.unit = en
  * @param {string} format
  * @return {number}
  */
-export default function parse(str = '', format = 'ms') {
+function parse(str = '', format = 'ms') {
   let result = null, prevUnits
 
   String(str)
@@ -35,3 +33,7 @@ export default function parse(str = '', format = 'ms') {
 
   return result && ((result / (parse.unit[format] || 1)) * (str[0] === '-' ? -1 : 1))
 }
+
+parse.unit = en
+
+module.exports = parse

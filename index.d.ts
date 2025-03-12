@@ -34,4 +34,4 @@ declare namespace parse {
  */
 declare function parse(str?: string, format?: string): number | null;
 
-export default parse;
+export = parse;

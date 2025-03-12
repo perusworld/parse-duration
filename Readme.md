@@ -1,14 +1,13 @@
-
-# parse-duration [![Test](https://github.com/jkroso/parse-duration/actions/workflows/test.yml/badge.svg)](https://github.com/jkroso/parse-duration/actions/workflows/test.yml)
+# parse-duration [![Test](https://github.com/perusworld/parse-duration/actions/workflows/test.yml/badge.svg)](https://github.com/perusworld/parse-duration/actions/workflows/test.yml)
 
 Convert a human readable duration to ms.
 
-[![NPM](https://nodei.co/npm/parse-duration.png?mini=true)](https://npmjs.org/package/parse-duration)
+> **Note:** This package uses CommonJS module format. For ESM environments, you may need to use dynamic imports or a bundler that supports CommonJS modules. Alternatively, you can access the ESM version from the GitHub repository: https://github.com/jkroso/parse-duration
 
 ## Usage
 
 ```js
-import parse from 'parse-duration'
+const parse = require('parse-duration')
 
 // parse different time units
 let ns = parse('1ns')       // => 1 / 1e6
@@ -54,8 +53,8 @@ parse('5μs')                // => 0.005
 Switch the default en locale to another language ([see /locale](/locale)).
 
 ```js
-import es from 'parse-duration/locale/es.js'
-import parse from 'parse-duration'
+const es = require('parse-duration/locale/es.js')
+const parse = require('parse-duration')
 
 parse.unit = es
 

@@ -1,10 +1,10 @@
 'use strict'
 
-import t from 'tape'
-import parse from './index.js'
-import es from './locale/es.js'
-import en from './locale/en.js'
-import de from './locale/de.js'
+const t = require('tape')
+const parse = require('./index.js')
+const es = require('./locale/es.js')
+const en = require('./locale/en.js')
+const de = require('./locale/de.js')
 
 let { ns, h, mo, s, ms, d, y, m } = parse.unit
 
